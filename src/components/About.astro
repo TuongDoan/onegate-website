@@ -1,0 +1,151 @@
+---
+---
+
+<section class="about" id="about">
+  <div class="about__inner">
+    <div class="about__left">
+      <span class="about__eyebrow">About Us</span>
+      <h2 class="about__title">Built to Transform<br/>Cross-Border Sourcing</h2>
+      <p class="about__intro">
+        China remains the world's manufacturing powerhouse and one of the most
+        strategic supply markets for businesses seeking scale, variety, and cost
+        advantage. One Gate is a B2B sourcing and procurement gateway that helps
+        businesses access this market with stronger control, greater efficiency,
+        and higher commercial readiness.
+      </p>
+    </div>
+
+    <div class="about__right">
+      <div class="about__block">
+        <div class="about__block-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <circle cx="11" cy="11" r="9.5" stroke="#18442A" stroke-width="1.5"/>
+            <path d="M11 2c0 0-4 3-4 9s4 9 4 9M11 2c0 0 4 3 4 9s-4 9-4 9M2 11h18" stroke="#18442A" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="about__block-title">Direct Supply Access</h3>
+          <p class="about__block-text">
+            Reach broader supply networks with fewer unnecessary layers.
+          </p>
+        </div>
+      </div>
+
+      <div class="about__block">
+        <div class="about__block-icon">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+            <path d="M4 11h14M4 6h14M4 16h8" stroke="#18442A" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="17" cy="16" r="3.5" stroke="#18442A" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div>
+          <h3 class="about__block-title">Built for Growth</h3>
+          <p class="about__block-text">
+            Source with a model designed for scale, speed, and better decision-making.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 9rem 2.5rem;
+    background: white;
+  }
+
+  .about__inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .about__eyebrow {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 1.5rem;
+  }
+
+  .about__title {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 800;
+    color: #0c1c12;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+
+  .about__intro {
+    font-size: 1rem;
+    line-height: 1.82;
+    color: #5c6660;
+  }
+
+  /* Value blocks */
+  .about__right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .about__block {
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+    padding: 2rem;
+    background: var(--off-white);
+    border-radius: 20px;
+    border: 1px solid rgba(24, 68, 42, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .about__block:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(24, 68, 42, 0.08);
+  }
+
+  .about__block-icon {
+    width: 46px;
+    height: 46px;
+    background: rgba(24, 68, 42, 0.09);
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .about__block-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0c1c12;
+    margin-bottom: 0.5rem;
+  }
+
+  .about__block-text {
+    font-size: 0.92rem;
+    line-height: 1.68;
+    color: #6a7870;
+  }
+
+  @media (max-width: 900px) {
+    .about__inner {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+
+    .about__right {
+      padding-top: 0;
+    }
+  }
+</style>

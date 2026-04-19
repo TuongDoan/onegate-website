@@ -1,0 +1,383 @@
+---
+const pillars = [
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8.5" stroke="currentColor" stroke-width="1.5"/><path d="M10 2c0 0-4 3-4 8s4 8 4 8M10 2c0 0 4 3 4 8s-4 8-4 8M2 10h16" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>`,
+    title: 'Supplier Access at Scale',
+    desc: 'Explore a wider network of manufacturers, brand owners, and supply sources through one platform.',
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="6" stroke="currentColor" stroke-width="1.5"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M6 8.5h5M8.5 6v5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>`,
+    title: 'Smarter Product Selection',
+    desc: 'Use structured search and filtering to identify better-fit products with greater speed and precision.',
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 5h14M3 10h10M3 15h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="15" cy="14" r="3.5" stroke="currentColor" stroke-width="1.5"/></svg>`,
+    title: 'Connected Buying Journey',
+    desc: 'Manage the journey from product discovery to order tracking through one integrated flow.',
+  },
+  {
+    icon: `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect x="3" y="4" width="14" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    title: 'Business-Ready Transactions',
+    desc: 'Support cross-border purchases with valid invoices, required documentation, and greater operational clarity.',
+  },
+];
+---
+
+<section class="solutions" id="solutions">
+  <div class="solutions__inner">
+    <div class="solutions__header">
+      <span class="solutions__eyebrow">Our Solutions</span>
+      <h2 class="solutions__title">Powered by Gom Gom</h2>
+      <p class="solutions__intro">
+        Gom Gom is the sourcing platform behind One Gate, built to help businesses
+        search, evaluate, and purchase from China through a more connected and
+        business-ready workflow.
+      </p>
+    </div>
+
+    <!-- Platform mockup -->
+    <div class="solutions__mockup-wrap">
+      <div class="solutions__mockup">
+        <!-- Browser chrome -->
+        <div class="mockup__chrome">
+          <div class="mockup__dots">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup__bar">gomgom.io / sourcing</div>
+        </div>
+
+        <!-- Platform UI content -->
+        <div class="mockup__body">
+          <!-- Search bar row -->
+          <div class="mockup__search-row">
+            <div class="mockup__search">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="6" cy="6" r="4.5" stroke="#888" stroke-width="1.3"/>
+                <path d="M9.5 9.5L12 12" stroke="#888" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              <span>Search suppliers, products, categories…</span>
+            </div>
+            <div class="mockup__filters">
+              <span>Country</span>
+              <span>Category</span>
+              <span>MOQ</span>
+            </div>
+          </div>
+
+          <!-- Product grid -->
+          <div class="mockup__grid">
+            {[
+              { label: 'Industrial Valves', tag: 'Verified', cn: true },
+              { label: 'Electronic Components', tag: 'Top Rated', cn: true },
+              { label: 'Textile Fabrics', tag: 'New', cn: false },
+              { label: 'Steel Fittings', tag: 'Verified', cn: true },
+              { label: 'Packaging Materials', tag: 'Best Price', cn: false },
+              { label: 'LED Modules', tag: 'Verified', cn: true },
+            ].map((item) => (
+              <div class="mockup__card">
+                <div class="mockup__card-img"></div>
+                <div class="mockup__card-info">
+                  <div class="mockup__card-title">{item.label}</div>
+                  <div class="mockup__card-meta">
+                    <span class={`mockup__tag mockup__tag--${item.tag === 'Verified' ? 'green' : item.tag === 'Top Rated' ? 'blue' : 'gray'}`}>{item.tag}</span>
+                    {item.cn && <span class="mockup__origin">CN</span>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pillars -->
+    <div class="solutions__pillars">
+      {pillars.map((p) => (
+        <div class="pillar">
+          <div class="pillar__icon" set:html={p.icon} />
+          <div>
+            <h3 class="pillar__title">{p.title}</h3>
+            <p class="pillar__desc">{p.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .solutions {
+    padding: 9rem 2.5rem;
+    background: #f5f7f6;
+  }
+
+  .solutions__inner {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .solutions__header {
+    text-align: center;
+    max-width: 620px;
+    margin: 0 auto 4rem;
+  }
+
+  .solutions__eyebrow {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--forest);
+    margin-bottom: 1.25rem;
+  }
+
+  .solutions__title {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    font-weight: 800;
+    color: #0c1c12;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+  }
+
+  .solutions__intro {
+    font-size: 1rem;
+    line-height: 1.78;
+    color: #5c6660;
+  }
+
+  /* Platform mockup */
+  .solutions__mockup-wrap {
+    perspective: 1200px;
+    margin-bottom: 4.5rem;
+  }
+
+  .solutions__mockup {
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 24px 64px rgba(24, 68, 42, 0.12), 0 4px 16px rgba(0,0,0,0.06);
+    overflow: hidden;
+    transform: rotateX(3deg);
+    transition: transform 0.4s;
+    border: 1px solid rgba(24, 68, 42, 0.08);
+  }
+
+  .solutions__mockup:hover {
+    transform: rotateX(0deg);
+  }
+
+  .mockup__chrome {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    background: #f0f2f1;
+    border-bottom: 1px solid rgba(24, 68, 42, 0.07);
+  }
+
+  .mockup__dots {
+    display: flex;
+    gap: 5px;
+  }
+
+  .mockup__dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+  }
+
+  .mockup__dots span:first-child { background: #FF6059; }
+  .mockup__dots span:nth-child(2) { background: #FFBE2E; }
+  .mockup__dots span:nth-child(3) { background: #28C840; }
+
+  .mockup__bar {
+    flex: 1;
+    background: white;
+    border-radius: 6px;
+    padding: 0.3rem 0.75rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.75rem;
+    color: #888;
+    border: 1px solid #e8e8e8;
+  }
+
+  .mockup__body {
+    padding: 1.5rem;
+  }
+
+  .mockup__search-row {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .mockup__search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #f5f7f6;
+    border: 1.5px solid #dde3de;
+    border-radius: 9px;
+    padding: 0.55rem 0.9rem;
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .mockup__search span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.78rem;
+    color: #b0b8b2;
+  }
+
+  .mockup__filters {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .mockup__filters span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--forest);
+    background: rgba(24, 68, 42, 0.07);
+    border: 1px solid rgba(24, 68, 42, 0.12);
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+
+  .mockup__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.85rem;
+  }
+
+  .mockup__card {
+    background: #f9faf9;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(24, 68, 42, 0.06);
+  }
+
+  .mockup__card-img {
+    height: 70px;
+    background: linear-gradient(135deg, #e8ede9 0%, #d5e0d7 100%);
+  }
+
+  .mockup__card-info {
+    padding: 0.6rem 0.6rem 0.7rem;
+  }
+
+  .mockup__card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #1a2e20;
+    margin-bottom: 0.35rem;
+    line-height: 1.3;
+  }
+
+  .mockup__card-meta {
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+
+  .mockup__tag {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 600;
+    padding: 0.15rem 0.45rem;
+    border-radius: 50px;
+  }
+
+  .mockup__tag--green { background: rgba(24, 68, 42, 0.1); color: var(--forest); }
+  .mockup__tag--blue { background: rgba(131, 145, 143, 0.15); color: var(--ocean); }
+  .mockup__tag--gray { background: rgba(129, 102, 69, 0.1); color: var(--wood); }
+
+  .mockup__origin {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.58rem;
+    font-weight: 700;
+    color: #888;
+    border: 1px solid #ddd;
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
+
+  @media (max-width: 768px) {
+    .mockup__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  /* Pillars */
+  .solutions__pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+
+  .pillar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 1.75rem;
+    background: white;
+    border-radius: 18px;
+    border: 1px solid rgba(24, 68, 42, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .pillar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(24, 68, 42, 0.09);
+  }
+
+  .pillar__icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(24, 68, 42, 0.08);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--forest);
+    flex-shrink: 0;
+  }
+
+  .pillar__title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #0c1c12;
+    line-height: 1.3;
+  }
+
+  .pillar__desc {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: #6a7870;
+  }
+
+  @media (max-width: 900px) {
+    .solutions__pillars {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 500px) {
+    .solutions__pillars {
+      grid-template-columns: 1fr;
+    }
+
+    .mockup__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+</style>

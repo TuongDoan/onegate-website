@@ -1,0 +1,185 @@
+---
+const services = [
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 8h20M4 14h20M4 20h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="18" y="16" width="8" height="8" rx="2" stroke="currentColor" stroke-width="1.8"/></svg>`,
+    title: 'Trade Sourcing',
+    desc: 'We identify and vet reliable suppliers across Asia and beyond, ensuring quality products at competitive prices.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="10" width="24" height="14" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M8 10V7a6 6 0 0112 0v3" stroke="currentColor" stroke-width="1.8"/><circle cx="14" cy="17" r="2.5" fill="currentColor"/></svg>`,
+    title: 'Customs & Compliance',
+    desc: 'Expert handling of import/export documentation, duties, and regulatory compliance for smooth border clearance.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3 14h22M14 3l11 11-11 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
+    title: 'Freight Forwarding',
+    desc: 'Sea, air, and land freight solutions tailored to your timeline and budget across 42+ countries.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" stroke="currentColor" stroke-width="1.8"/><path d="M14 3v11l7 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`,
+    title: 'Real-Time Tracking',
+    desc: 'Full visibility into your shipment at every stage with our live tracking dashboard and instant alerts.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M4 24V10l10-7 10 7v14H4z" stroke="currentColor" stroke-width="1.8"/><rect x="10" y="16" width="8" height="8" stroke="currentColor" stroke-width="1.8"/></svg>`,
+    title: 'Warehousing',
+    desc: 'Strategically located warehouses for temporary storage, consolidation, and last-mile distribution.',
+  },
+  {
+    icon: `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 14c0-5 4-9 9-9s9 4 9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M5 14l3 3M14 5v3M23 14l-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="14" cy="20" r="4" stroke="currentColor" stroke-width="1.8"/></svg>`,
+    title: 'Supply Chain Consulting',
+    desc: 'Strategic advisory services to optimise your supply chain, reduce costs, and improve resilience.',
+  },
+];
+---
+
+<section class="services" id="services">
+  <div class="services__inner">
+    <div class="services__header">
+      <span class="services__tag">What We Do</span>
+      <h2 class="services__title">End-to-End Trade<br/>& Logistics Solutions</h2>
+      <p class="services__subtitle">
+        From sourcing to delivery, One Gate handles every step so you can focus on growing your business.
+      </p>
+    </div>
+
+    <div class="services__grid">
+      {services.map((s) => (
+        <div class="service-card">
+          <div class="service-card__icon" set:html={s.icon} />
+          <h3 class="service-card__title">{s.title}</h3>
+          <p class="service-card__desc">{s.desc}</p>
+          <a href="#contact" class="service-card__link">
+            Learn more
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .services {
+    padding: 7rem 2rem;
+    background: var(--off-white);
+  }
+
+  .services__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .services__header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 4rem;
+  }
+
+  .services__tag {
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--forest);
+    background: rgba(24, 68, 42, 0.08);
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+  }
+
+  .services__title {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 800;
+    color: #0f1f15;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .services__subtitle {
+    color: #5a5a5a;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  .services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .service-card {
+    background: white;
+    border-radius: 18px;
+    padding: 2rem;
+    border: 1px solid rgba(24, 68, 42, 0.07);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(24, 68, 42, 0.1);
+    border-color: rgba(24, 68, 42, 0.15);
+  }
+
+  .service-card__icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(24, 68, 42, 0.07);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--forest);
+    flex-shrink: 0;
+  }
+
+  .service-card__title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f1f15;
+  }
+
+  .service-card__desc {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: #666;
+    flex: 1;
+  }
+
+  .service-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--forest);
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: gap 0.2s;
+  }
+
+  .service-card__link:hover {
+    gap: 0.7rem;
+  }
+
+  @media (max-width: 900px) {
+    .services__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .services__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

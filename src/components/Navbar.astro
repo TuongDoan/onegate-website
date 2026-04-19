@@ -1,0 +1,171 @@
+---
+---
+
+<nav class="navbar" id="navbar">
+  <div class="navbar__inner">
+    <a href="/" class="navbar__logo">
+      <img src="/logo.svg" alt="One Gate Global Trading" class="navbar__logo-img" />
+    </a>
+
+    <ul class="navbar__links">
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#solutions">Our Solutions</a></li>
+    </ul>
+
+    <a href="#cta" class="navbar__cta">Talk to Us</a>
+
+    <button class="navbar__burger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<script>
+  const navbar = document.getElementById('navbar')!;
+  const threshold = window.innerHeight * 0.1;
+
+  function update() {
+    if (window.scrollY > threshold) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+  }
+
+  update();
+  window.addEventListener('scroll', update, { passive: true });
+</script>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: transparent;
+    transition: background 0.35s ease, border-color 0.35s ease, backdrop-filter 0.35s ease;
+    border-bottom: 1px solid transparent;
+  }
+
+  .navbar.scrolled {
+    background: rgba(12, 28, 18, 0.97);
+    backdrop-filter: blur(16px);
+    border-bottom-color: rgba(228, 219, 196, 0.1);
+  }
+
+  .navbar__inner {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .navbar__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .navbar__logo-img {
+    height: 52px;
+    width: auto;
+  }
+
+  .navbar__links {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+    margin-left: auto;
+  }
+
+  .navbar__links a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.25s;
+  }
+
+  .navbar.scrolled .navbar__links a {
+    color: rgba(243, 237, 227, 0.75);
+  }
+
+  .navbar__links a:hover {
+    color: var(--sand);
+  }
+
+  .navbar.scrolled .navbar__links a:hover {
+    color: var(--sand);
+  }
+
+  .navbar__cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.55rem 1.4rem;
+    background: var(--off-white);
+    color: var(--forest);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 1px solid var(--off-white);
+    transition: background 0.25s, color 0.25s, transform 0.15s;
+    flex-shrink: 0;
+  }
+
+  .navbar__cta:hover {
+    background: white;
+    border-color: white;
+    transform: translateY(-1px);
+  }
+
+  .navbar.scrolled .navbar__cta {
+    background: var(--off-white);
+    color: var(--forest);
+    border-color: var(--off-white);
+  }
+
+  .navbar.scrolled .navbar__cta:hover {
+    background: white;
+    border-color: white;
+  }
+
+  .navbar__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: auto;
+  }
+
+  .navbar__burger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: white;
+    border-radius: 2px;
+    transition: background 0.25s;
+  }
+
+  .navbar.scrolled .navbar__burger span {
+    background: var(--forest);
+  }
+
+  @media (max-width: 640px) {
+    .navbar__links { display: none; }
+    .navbar__cta { display: none; }
+    .navbar__burger { display: flex; }
+  }
+</style>
