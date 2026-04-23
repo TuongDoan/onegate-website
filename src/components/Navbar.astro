@@ -12,8 +12,6 @@
       <li><a href="#solutions">Our Solutions</a></li>
     </ul>
 
-    <a href="#cta" class="navbar__cta">Talk to Us</a>
-
     <button class="navbar__burger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -22,79 +20,46 @@
 
 <style>
   .navbar {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
-    background: rgba(255, 255, 255, 0.97);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(24, 68, 42, 0.07);
+    background: transparent;
   }
 
   .navbar__inner {
-    max-width: 1160px;
+    max-width: 1440px;
     margin: 0 auto;
-    padding: 0 2.5rem;
-    height: 72px;
+    padding: 2rem 3.5rem;
     display: flex;
     align-items: center;
     gap: 2.5rem;
   }
 
-  .navbar__logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    flex-shrink: 0;
-  }
-
   .navbar__logo-img {
-    height: 36px;
+    height: 53px;
     width: auto;
+    display: block;
   }
 
   .navbar__links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 3rem;
     margin-left: auto;
   }
 
   .navbar__links a {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 500;
-    color: #555;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-    transition: color 0.2s;
-  }
-
-  .navbar__links a:hover {
     color: var(--forest);
-  }
-
-  .navbar__cta {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.6rem 1.5rem;
-    background: var(--forest);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.82rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    border-radius: 50px;
     text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-    flex-shrink: 0;
+    transition: opacity 0.2s;
   }
 
-  .navbar__cta:hover {
-    background: var(--leaf);
-    transform: translateY(-1px);
-  }
+  .navbar__links a:hover { opacity: 0.65; }
 
   .navbar__burger {
     display: none;
@@ -109,15 +74,15 @@
 
   .navbar__burger span {
     display: block;
-    width: 22px;
+    width: 24px;
     height: 2px;
     background: var(--forest);
     border-radius: 2px;
   }
 
-  @media (max-width: 640px) {
+  @media (max-width: 720px) {
+    .navbar__inner { padding: 1.25rem 1.25rem; }
     .navbar__links { display: none; }
-    .navbar__cta { display: none; }
     .navbar__burger { display: flex; }
   }
 </style>

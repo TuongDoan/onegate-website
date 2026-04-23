@@ -2,305 +2,83 @@
 ---
 
 <section class="hero">
-  <div class="hero__text">
+  <img src="/img/banner.jpg" alt="" class="hero__map" aria-hidden="true" />
+
+  <div class="hero__content">
     <h1 class="hero__title">
-      Your Gateway to<br />
-      <em>Smarter China Sourcing</em>
+      Your Gateway<br />
+      to China's<br />
+      Sourcing Power
     </h1>
-    <p class="hero__subtitle">
-      Unlock efficient sourcing from China with stronger cost control,
-      better-fit supplier selection, and cross-border compliance built
-      into the process.
-    </p>
-    <a href="#cta" class="hero__cta">Talk to Us</a>
-  </div>
-
-  <!-- Map + floating cards -->
-  <div class="hero__map-area">
-
-    <!-- Dotted world map SVG -->
-    <svg class="hero__map-svg" viewBox="0 0 900 340" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-      <defs>
-        <pattern id="dots" x="0" y="0" width="9" height="9" patternUnits="userSpaceOnUse">
-          <circle cx="1.8" cy="1.8" r="1.4" fill="#CBD5DC"/>
-        </pattern>
-        <!-- Clip paths for each continent -->
-        <clipPath id="clip-na"><path d="M55,52 L80,38 L125,28 L175,33 L215,48 L248,70 L262,102 L258,138 L242,168 L218,188 L188,202 L162,220 L140,230 L122,220 L100,200 L78,178 L60,152 L48,122 L44,92 L50,68 Z"/></clipPath>
-        <clipPath id="clip-gl"><path d="M252,18 L288,12 L308,20 L304,44 L278,52 L255,44 Z"/></clipPath>
-        <clipPath id="clip-sa"><path d="M152,228 L180,220 L210,226 L238,244 L256,272 L262,305 L256,336 L240,328 L218,308 L198,295 L180,275 L162,252 L148,232 Z"/></clipPath>
-        <clipPath id="clip-eu"><path d="M362,38 L398,32 L432,36 L460,50 L472,72 L462,96 L440,110 L412,114 L384,108 L364,92 L354,68 L358,48 Z"/></clipPath>
-        <clipPath id="clip-af"><path d="M366,118 L408,108 L448,110 L478,126 L494,155 L497,190 L490,228 L478,262 L462,292 L444,318 L422,332 L400,328 L378,308 L360,278 L349,245 L346,208 L350,170 L356,140 Z"/></clipPath>
-        <clipPath id="clip-as"><path d="M466,28 L532,20 L602,18 L664,24 L720,32 L762,46 L800,64 L820,90 L815,120 L798,145 L772,162 L745,175 L714,180 L684,186 L655,192 L624,196 L596,202 L568,210 L540,215 L514,212 L490,200 L472,180 L458,155 L448,128 L446,98 L452,68 L460,44 Z"/></clipPath>
-        <clipPath id="clip-ind"><path d="M520,195 L548,198 L562,220 L558,248 L540,264 L518,258 L506,236 L510,214 Z"/></clipPath>
-        <clipPath id="clip-sea"><path d="M615,178 L640,182 L652,198 L647,222 L630,234 L612,228 L603,212 L606,194 Z"/></clipPath>
-        <clipPath id="clip-id1"><path d="M648,222 L684,216 L702,225 L700,242 L678,248 L652,242 Z"/></clipPath>
-        <clipPath id="clip-id2"><path d="M705,222 L732,218 L748,228 L746,245 L724,252 L705,243 Z"/></clipPath>
-        <clipPath id="clip-id3"><path d="M752,226 L775,222 L785,234 L780,248 L760,254 L750,242 Z"/></clipPath>
-        <clipPath id="clip-au"><path d="M658,262 L700,254 L742,256 L775,268 L796,288 L802,315 L794,338 L770,315 L742,308 L710,308 L682,315 L660,304 L645,282 Z"/></clipPath>
-        <clipPath id="clip-nz"><path d="M820,296 L832,288 L840,300 L834,322 L820,330 L813,316 Z"/></clipPath>
-        <clipPath id="clip-jp"><path d="M796,72 L810,65 L820,75 L815,95 L800,100 L792,88 Z"/></clipPath>
-        <clipPath id="clip-uk"><path d="M356,42 L368,36 L378,44 L374,62 L360,66 L352,54 Z"/></clipPath>
-      </defs>
-
-      <!-- Continent fills -->
-      <rect width="900" height="340" clip-path="url(#clip-na)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-gl)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-sa)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-eu)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-af)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-as)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-ind)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-sea)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-id1)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-id2)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-id3)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-au)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-nz)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-jp)" fill="url(#dots)"/>
-      <rect width="900" height="340" clip-path="url(#clip-uk)" fill="url(#dots)"/>
-
-      <!-- Trade route arc: Europe (420,75) → China (745,100) -->
-      <path
-        d="M 420,75 Q 580,10 745,100"
-        stroke="#18442A"
-        stroke-width="1.8"
-        stroke-dasharray="7 5"
-        stroke-linecap="round"
-        opacity="0.7"
-        class="trade-arc"
-      />
-
-      <!-- Left pin: Europe -->
-      <circle cx="420" cy="75" r="6" fill="#18442A"/>
-      <circle cx="420" cy="75" r="12" fill="#18442A" opacity="0.12" class="pulse"/>
-
-      <!-- Right pin: China/Vietnam -->
-      <circle cx="745" cy="100" r="6" fill="#18442A"/>
-      <circle cx="745" cy="100" r="12" fill="#18442A" opacity="0.12" class="pulse"/>
-
-      <!-- Hoàng Sa -->
-      <circle cx="722" cy="148" r="3.5" fill="#816645" opacity="0.8"/>
-      <text x="730" y="145" font-family="Montserrat,sans-serif" font-size="7" font-weight="600" fill="#816645" opacity="0.85">Hoàng Sa</text>
-
-      <!-- Trường Sa -->
-      <circle cx="730" cy="165" r="3.5" fill="#816645" opacity="0.8"/>
-      <text x="736" y="168" font-family="Montserrat,sans-serif" font-size="7" font-weight="600" fill="#816645" opacity="0.85">Trường Sa</text>
-    </svg>
-
-    <!-- Floating stat cards -->
-    <div class="stat-card stat-card--left">
-      <div class="stat-card__label">
-        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-          <path d="M1 7.5L3.5 5L5.5 6.5L9 2" stroke="#18442A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Active Routes
-        <span class="stat-card__badge">↑ 12%</span>
-      </div>
-      <div class="stat-card__value">42 Countries</div>
-      <div class="stat-card__sub">↑ from last quarter</div>
-    </div>
-
-    <div class="stat-card stat-card--center">
-      <div class="stat-card__big">45%</div>
-      <div class="stat-card__tag">Better Efficiency</div>
-    </div>
-
-    <div class="stat-card stat-card--right">
-      <div class="stat-card__label">
-        <svg width="11" height="11" viewBox="0 0 11 11" fill="none">
-          <path d="M1 7.5L3.5 5L5.5 6.5L9 2" stroke="#18442A" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Total Shipments
-        <span class="stat-card__badge">↑ 8%</span>
-      </div>
-      <div class="stat-card__value">125,829</div>
-      <div class="stat-card__sub">10,730 last year</div>
-    </div>
-
+    <a href="#cta" class="hero__cta">TALK TO US</a>
   </div>
 </section>
 
 <style>
   .hero {
-    background: white;
-    padding-top: 72px;
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1440 / 810;
+    min-height: 640px;
+    overflow: hidden;
+    background: #EDE8DC;
   }
 
-  /* ── Text block ── */
-  .hero__text {
-    text-align: center;
-    padding: 5rem 2rem 3rem;
-    max-width: 720px;
+  .hero__map {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+    max-width: 1440px;
     margin: 0 auto;
+    padding: 0 3.5rem;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2.25rem;
   }
 
   .hero__title {
-    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+    font-weight: 400;
     line-height: 1.1;
-    color: #0c1c12;
-    letter-spacing: -0.025em;
-  }
-
-  .hero__title em {
-    font-style: normal;
     color: var(--forest);
-  }
-
-  .hero__subtitle {
-    font-size: 1.05rem;
-    line-height: 1.72;
-    color: #667;
-    max-width: 520px;
+    letter-spacing: -0.015em;
   }
 
   .hero__cta {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.85rem 2.2rem;
+    display: inline-block;
+    padding: 1.1rem 3.25rem;
     background: var(--forest);
-    color: white;
+    color: var(--white);
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
     text-decoration: none;
-    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    transition: background 0.2s, transform 0.15s;
   }
 
   .hero__cta:hover {
     background: var(--leaf);
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(24, 68, 42, 0.22);
   }
 
-  /* ── Map area ── */
-  .hero__map-area {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 1rem 3rem;
-  }
-
-  .hero__map-svg {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .trade-arc {
-    stroke-dashoffset: 0;
-    animation: dash 4s linear infinite;
-  }
-
-  @keyframes dash {
-    to { stroke-dashoffset: -24; }
-  }
-
-  .pulse {
-    animation: pulse-ring 2.8s ease-in-out infinite;
-  }
-
-  @keyframes pulse-ring {
-    0%, 100% { opacity: 0.12; }
-    50%       { opacity: 0.04; }
-  }
-
-  /* ── Stat cards ── */
-  .stat-card {
-    position: absolute;
-    background: white;
-    border-radius: 14px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.09);
-    border: 1px solid rgba(24, 68, 42, 0.07);
-  }
-
-  .stat-card--left {
-    left: 2rem;
-    bottom: 22%;
-    padding: 1rem 1.25rem;
-    min-width: 170px;
-  }
-
-  .stat-card--center {
-    left: 50%;
-    top: 48%;
-    transform: translate(-50%, -50%);
-    background: var(--forest);
-    color: white;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    min-width: 130px;
-  }
-
-  .stat-card--right {
-    right: 2rem;
-    bottom: 22%;
-    padding: 1rem 1.25rem;
-    min-width: 170px;
-  }
-
-  .stat-card__label {
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.68rem;
-    font-weight: 600;
-    color: #999;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    margin-bottom: 0.4rem;
-  }
-
-  .stat-card__badge {
-    margin-left: auto;
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: var(--forest);
-    background: rgba(24,68,42,0.08);
-    padding: 0.1rem 0.45rem;
-    border-radius: 50px;
-  }
-
-  .stat-card__value {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 800;
-    color: #0c1c12;
-    line-height: 1;
-    margin-bottom: 0.3rem;
-  }
-
-  .stat-card__sub {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.7rem;
-    color: #aaa;
-  }
-
-  .stat-card__big {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: 800;
-    color: white;
-    line-height: 1;
-    margin-bottom: 0.25rem;
-  }
-
-  .stat-card__tag {
-    font-family: 'Raleway', sans-serif;
-    font-size: 0.72rem;
-    color: rgba(255,255,255,0.75);
-  }
-
-  @media (max-width: 700px) {
-    .stat-card--left,
-    .stat-card--right { display: none; }
-    .stat-card--center { top: 52%; }
+  @media (max-width: 720px) {
+    .hero { min-height: 560px; aspect-ratio: auto; padding: 6rem 0 3rem; }
+    .hero__map { opacity: 0.35; }
+    .hero__content { padding: 0 1.5rem; }
   }
 </style>

@@ -1,0 +1,115 @@
+---
+const items = [
+  {
+    num: '01.',
+    img: '/img/why-1.jpg',
+    title: 'Built for Direct Supply Access',
+    desc: 'Reach broader supply networks access through official platform partnerships.',
+  },
+  {
+    num: '02.',
+    img: '/img/why-2.jpg',
+    title: 'Built for Growth',
+    desc: 'Source with a model designed for scale, speed, and better decision-making.',
+  },
+  {
+    num: '03.',
+    img: '/img/why-3.jpg',
+    title: 'Built for Business',
+    desc: 'Ready for documented business transactions',
+  },
+];
+---
+
+<section class="why" id="why">
+  <div class="why__inner">
+    <h2 class="why__title">Why One Gate?</h2>
+
+    <div class="why__grid">
+      {items.map((it) => (
+        <article class="why__card">
+          <div class="why__image-wrap">
+            <img src={it.img} alt="" class="why__image" loading="lazy" />
+          </div>
+          <div class="why__num">{it.num}</div>
+          <h3 class="why__heading">{it.title}</h3>
+          <p class="why__desc">{it.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .why {
+    background: #EDE8DC;
+    padding: 5rem 3.5rem 7rem;
+  }
+
+  .why__inner {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .why__title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    color: var(--forest);
+    letter-spacing: -0.015em;
+    margin-bottom: 3rem;
+  }
+
+  .why__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+
+  .why__card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why__image-wrap {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  .why__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .why__num {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+  }
+
+  .why__heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--forest);
+    margin-bottom: 0.9rem;
+  }
+
+  .why__desc {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: #3a3a3a;
+    max-width: 340px;
+  }
+
+  @media (max-width: 900px) {
+    .why { padding: 4rem 1.5rem; }
+    .why__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  }
+</style>
